@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %>
+    <title>Document</title>
+
+    <h1>Mental Health Blog</h1>
+    <form action="/health"  method="POST">
+        Name: <input type="text" name="name"> 
+        Date: <input type="text" name="date">
+        Title: <input type="text" name="title">
+        Excert: <input type="text" name="excert">
+        Tag: <input type="text" name="tag">
+        <input type="submit" value="Create Post">
+    </form>
+</head>
+<body>
+    
+</body>
+</html>
