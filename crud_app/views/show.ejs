@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RUN-ON-BLOG</title>
+   <%- include('./partials/head.ejs') %>
 </head>
 <body>
+ <!-- =============== HEADER ================-->
+
+    <%- include('./partials/header.ejs') %>
+
+ <!-- =============== MAIN ================-->
 
     <h1><%=health.title%></h1>
     <img src="<%=health.image%>" alt="N/A">
     <p><%=health.excert%></p>
      
     <nav>
-        <a href="/health">Home</a>
+        <a href="/blog">full blog</a>
     </nav>
 </body>
 </html>
+
+
+
+

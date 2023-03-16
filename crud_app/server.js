@@ -13,20 +13,20 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 
 // Getting our index.ejs file and rendering it on browser at health route
-app.get('/health', (req,res) => {
+app.get('/Blog', (req,res) => {
     Health.find({}).then((allHealth) => {
-        res.render('index.ejs', {
+        res.render('blog.ejs', {
             health: allHealth
         })
     })
 })
 
 // Getting our mental.ejs file and rendering it in our browwser at health/mental route
-app.get('/health/mental', (req, res) => {
-    res.render('mental.ejs')
+app.get('/Blog/new', (req, res) => {
+    res.render('createNew.ejs')
 })
 
-app.get('/health/:id', (req, res) =>{
+app.get('/Blog/:id', (req, res) =>{
     Health.findById(req.params.id).then((foundPost) => {
         res.render('show.ejs', {
             health: foundPost
