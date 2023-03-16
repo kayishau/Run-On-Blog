@@ -35,10 +35,13 @@ app.get('/health/:id', (req, res) =>{
 })
 
 // This ia a route to catch all tags
+// (this gets the route tag, and then it passes in the parameter of the tag the database, finds all of the post with tag and a specific tag value and renders all of those post with those values on the ejs page.)
 app.get('/tags/:tag', (req, res) => {
-    console.log(req.params.tag);
-    Health.find({tag: req.params.tag}).then((foundTags) => {
-        res.send(foundTags)
+    Health.find({tag: req.params.tag}).then((foundPost) => {
+        res.render('tags.ejs',{
+            health: foundPost,
+            tag: req.params.tag,
+        })
     })
 })
 
@@ -70,8 +73,6 @@ app.get('/health/:id/edit', (req,res) => {
         })
     })
 })
-// * NOTES/QUESTIONS * //
-// 1. cannot get the created model to show up as it is created in the terminal
 
 // Connects mongodb to mongoose
 mongoose.connect('mongodb://localhost:27017/blogcrud').then(() => {

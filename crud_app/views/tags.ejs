@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- You use scriplets/wizards hats when ypu want to pass JS as the value, when you need just regualr hardcoding in a file, you would use a script tag -->
+    <!-- This is generating a new background color whenever you refresh/load the tag page -->
+    <script>
+        window.onload = () => {
+            const bgColorArray = ['red', 'yellow', 'lavender', 'mint', 'pink']
+
+        const setRandomBgColor = Math.floor(Math.random() * bgColorArray.length) + 1
+
+        document.body.style.backgroundColor = bgColorArray[setRandomBgColor - 1]
+        }
+    </script>
+
     <title>RUN-ON-NEW</title>
    <%- include('./partials/head.ejs') %>
 </head>
@@ -11,13 +23,10 @@
 
  <!-- =============== MAIN ================-->
 
-    <h1>Health Index Page</h1>
-   
+    <h1><%= tag %></h1>
+    <ul>
         <% for (let i = 0; i < health.length; i++){ %>
-            <div>
-                <div>
-                    <img src="<%=health[i].image%>" alt="N/A">
-                </div>
+            <li>
                 <h4><a href="/health/<%=health[i].id%>"><%=health[i].title%></a></h4> 
                 <p> <%=health[i].excert%></p>
                 <form action="/health/<%=health[i].id%>?_method=DELETE" method="POST">
@@ -25,9 +34,9 @@
                     <a href="/health/<%=health[i].id%>/edit">EDIT</a>
                 </form>
                 <a href="/tags/<%=health[i].tag%>"><%=health[i].tag%></a>
-            </div> 
+            </li>
         <%}%>
-    
+    </ul>
 
 <!-- =============== FOOTER ================-->
     <%- include('./partials/footer.ejs') %>
