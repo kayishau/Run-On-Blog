@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.static("public"))
 
 // Getting our index.ejs file and rendering it on browser at health route
-app.get('/Blog', (req,res) => {
+app.get('/blog', (req,res) => {
     Health.find({}).then((allHealth) => {
         res.render('blog.ejs', {
             health: allHealth
@@ -22,11 +22,11 @@ app.get('/Blog', (req,res) => {
 })
 
 // Getting our mental.ejs file and rendering it in our browwser at health/mental route
-app.get('/Blog/new', (req, res) => {
+app.get('/blog/new', (req, res) => {
     res.render('createNew.ejs')
 })
 
-app.get('/Blog/:id', (req, res) =>{
+app.get('/blog/:id', (req, res) =>{
     Health.findById(req.params.id).then((foundPost) => {
         res.render('show.ejs', {
             health: foundPost
@@ -46,27 +46,27 @@ app.get('/tags/:tag', (req, res) => {
 })
 
 // This is the create route
-app.post('/health', (req, res) => {
+app.post('/blog', (req, res) => {
     // Create method
 Health.create(req.body).then((healthBlogInput) => {
-    res.redirect('/health')
+    res.redirect('/blog')
 })
 })
 // This is the delete route
-app.delete('/health/:id', (req, res) => {
+app.delete('/blog/:id', (req, res) => {
     Health.findByIdAndRemove(req.params.id).then(() => {
-        res.redirect('/health')
+        res.redirect('/blog')
     })
 })
 
 // This is the edit route
-app.put('/health/:id', (req,res) => {
+app.put('/blog/:id', (req,res) => {
     Health.findByIdAndUpdate(req.params.id, req.body).then(() => {
-        res.redirect('/health')
+        res.redirect('/blog')
     })
 })
 // This is the edit route (show route that allows us to edit)
-app.get('/health/:id/edit', (req,res) => {
+app.get('/blog/:id/edit', (req,res) => {
     Health.findById(req.params.id).then((foundPost) => {
         res.render('edit.ejs', {
             health: foundPost

@@ -1,26 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>RUN-ON-BLOG</title>
+    <title>wtw.blog</title>
    <%- include('./partials/head.ejs') %>
 </head>
-<body>
+    <body>
  <!-- =============== HEADER ================-->
 
-    <%- include('./partials/header.ejs') %>
+         <%- include('./partials/header.ejs') %>
 
  <!-- =============== MAIN ================-->
 
-    <h1><%=health.title%></h1>
-    <img src="<%=health.image%>" alt="N/A">
-    <p><%=health.excert%></p>
+         <h1><%=health.title%></h1>
+         <div>
+            <a href="/blog/new">create new post</a>
+        </div>
+         <div>
+            <img src="<%=health.image%>" alt="N/A">
+         </div>
+        
+        <p><%=health.excert%></p>
      
+<!-- My file for some reason is not reading any chunck of code after this point, skips right over it -->
+           <form action="/blog/<%=health.id%>?_method=DELETE" method="POST">
+            <input type="submit" value="delete">
+           </form>
+    
     <nav>
         <a href="/blog">full blog</a>
+        
     </nav>
 </body>
 </html>
-
-
-
 
