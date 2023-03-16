@@ -34,6 +34,14 @@ app.get('/health/:id', (req, res) =>{
     })
 })
 
+// This ia a route to catch all tags
+app.get('/tags/:tag', (req, res) => {
+    console.log(req.params.tag);
+    Health.find({tag: req.params.tag}).then((foundTags) => {
+        res.send(foundTags)
+    })
+})
+
 // This is the create route
 app.post('/health', (req, res) => {
     // Create method
