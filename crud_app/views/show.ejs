@@ -10,26 +10,30 @@
          <%- include('./partials/header.ejs') %>
 
  <!-- =============== MAIN ================-->
+        <section>
+            <h1><%=health.title%></h1>
+            <div>
+                <a href="/blog/new">new</a>
+            </div>
+            <div>
+                <img src="<%=health.image%>" alt="N/A">
+            </div>
+            <div>
+                 <p><%=health.excert%></p>
+            </div>
 
-         <h1><%=health.title%></h1>
-         <div>
-            <a href="/blog/new">create new post</a>
-        </div>
-         <div>
-            <img src="<%=health.image%>" alt="N/A">
-         </div>
-        
-        <p><%=health.excert%></p>
-     
-<!-- My file for some reason is not reading any chunck of code after this point, skips right over it -->
            <form action="/blog/<%=health.id%>?_method=DELETE" method="POST">
             <input type="submit" value="delete">
+            <a href="/blog/<%=health.id%>/edit">EDIT</a>
            </form>
-    
-    <nav>
-        <a href="/blog">full blog</a>
-        
-    </nav>
+           <div>
+                <a href="/tags/<%=health.tag%>"><%=health.tag%></a>
+            </div>
+        </section>
+         
+    <!-- =============== FOOTER ================-->
+    <%- include('./partials/footer.ejs') %>
+
 </body>
 </html>
 

@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>RUN-ON-NEW</title>
+    <title>wtw.new</title>
    <%- include('./partials/head.ejs') %>
 </head>
+<body>
  <!-- =============== HEADER ================-->
 
-        <%- include('./partials/head.ejs') %>
+        <%- include('./partials/header.ejs') %>
 
  <!-- =============== MAIN =================-->
-
-<body>
-    <h1>what's the word ?</h1>
-    <form action="/blog"  method="POST">
-          <div>
-            <label for="name">Name:</label>
-            <input type="text" name="name">
-          </div>
-          <div>
-            <label for="date">Date:</label>
-             <input type="text" name="date">
-          </div>
-          <div>
-            <label for="title">Title:</label>
-             <input type="text" name="title">
-          </div>
-          <div>
-            <label for="excert">Excert:</label>
-             <input type="text" name="excert">
-          </div>
-          <div>
-            <label for="tag">Tag:</label>
-             <input type="text" name="tag">
-          </div>
-          <div>
-            <label for="image">Image:</label>
-             <input type="text" name="image">
-          </div>
-        <input type="submit" value="Create Post">
-    </form>
+    <section>
+      <div>
+        <h1>so what's the word ?</h1>
+        <h5>Time to spill.</h5>
+      </div>
+      <form action="/blog"  method="POST">
+            <div>
+              <label for="name">Name:</label>
+              <input type="text" name="name">
+            </div>
+            <div>
+              <label for="date">Date:</label>
+               <input type="text" name="date">
+            </div>
+            <div>
+              <label for="title">Title:</label>
+               <input type="text" name="title">
+            </div>
+            <div>
+              <label for="excert">Excert:</label>
+               <input type="text" name="excert">
+            </div>
+            <div>
+              <label for="tag">Tag:</label>
+               <input type="text" name="tag">
+            </div>
+            <div>
+              <label for="image">Image:</label>
+               <input type="text" name="image">
+            </div>
+          <input type="submit" value="Create Post">
+      </form>
+     
+    </section>
    
  <!-- =============== FOOTER ================-->
  <%- include('./partials/footer.ejs') %>

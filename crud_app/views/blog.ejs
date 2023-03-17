@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>WTW-Blog</title>
+    <title>wtw.blog</title>
    <%- include('./partials/head.ejs') %>
 </head>
 <body>
@@ -10,10 +10,12 @@
     <%- include('./partials/header.ejs') %>
 
  <!-- =============== MAIN ================-->
-
-    <h1>WTW</h1>
     <div>
-        <a href="/blog/new">create new post</a>
+        <h1><span>W</span>hats <span>T</span>he <span>W</span>ord ?</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias provident blanditiis ipsa perferendis molestiae soluta quae facere distinctio libero eos quo nobis dicta, officiis nihil iste voluptate natus ea eaque!</p> 
+    </div>
+    <div>
+        <a href="/blog/new">new</a>
     </div>
    
         <% for (let i = 0; i < health.length; i++){ %>
@@ -29,12 +31,7 @@
                 </div>
                 <div>
                     <a href="/blog/<%=health[i].id%>"><span>read more</span></a>
-                
                 </div>
-                 <form action="/blog/<%=health[i].id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="DELETE">
-                    <a href="/blog/<%=health[i].id%>/edit">EDIT</a>
-                </form>  
                 <div>
                     <a href="/tags/<%=health[i].tag%>"><%=health[i].tag%></a>
                 </div>
