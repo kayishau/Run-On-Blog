@@ -26,6 +26,11 @@ app.get('/blog/new', (req, res) => {
     res.render('createNew.ejs')
 })
 
+// Getting our blog/about route and rendering our about.ejs file
+app.get('/blog/about', (req, res) => {
+    res.render('about.ejs')
+})
+
 app.get('/blog/:id', (req, res) =>{
     Health.findById(req.params.id).then((foundPost) => {
         res.render('show.ejs', {
