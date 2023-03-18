@@ -10,7 +10,7 @@ app.use(methodOverride('_method'))
 //To send json data back and forth with no issues
 app.use(express.urlencoded({extended: true}))
 // So that we can link staic files 
-app.use(express.static("public"))
+app.use(express.static(__dirname + "/public"))
 
 // Getting our index.ejs file and rendering it on browser at health route
 app.get('/blog', (req,res) => {
