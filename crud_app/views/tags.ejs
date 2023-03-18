@@ -5,7 +5,7 @@
     <!-- This is generating a new background color whenever you refresh/load the tag page -->
     <script>
         window.onload = () => {
-            const bgColorArray = ['red', 'yellow', 'lavender', 'mint', 'pink']
+            const bgColorArray = ['lavender', 'mint', 'pink']
 
         const setRandomBgColor = Math.floor(Math.random() * bgColorArray.length) + 1
 
@@ -34,7 +34,10 @@
                     <div>
                         <h4><%=health[i].title%></h4>
                     </div>
-                    <div>
+                    <div  data-aos="fade-left">
+                        <img src="<%=health[i].image%>" alt="N/A">
+                    </div>
+                    <div  data-aos="fade-right">
                         <p> <%=health[i].excert%></p>
                     </div>
                     <div>
@@ -50,9 +53,16 @@
         
         <%}%>
  
-
 <!-- =============== FOOTER ================-->
     <%- include('./partials/footer.ejs') %>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 3000,
+        once: false
+      });
+    </script>
     
 </body>
 </html>
