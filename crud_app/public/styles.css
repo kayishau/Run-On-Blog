@@ -1,44 +1,86 @@
 /* =========== NAV ============ */
 .main {
+    width: 100vw;
     display: flex;
     flex-direction: column;
     width: 100vw;
-    border: 10px solid rgb(143, 7, 111);
+    background-color: #E8E6D9;
+    border: 10px solid #E8E6D9;
 }
 
 div {
     align-self: center;
     margin-bottom: 15px;
 }
+nav {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: -10px;
+}
+
 ul {
+    margin-top: 50px;
+    padding-top: 0px;
     list-style: none;
-    align-self: flex-end
-    
+    margin-right: 30px;
+}
+
+.wtw {
+    margin-left: 30px; 
+    margin-top: 40px;
+}
+
+.wtw p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px; 
+    padding-top: 100px;
 }
 
 ul li {
+    font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     display: inline-block;
     margin-left: 20px;
 }
 
-
 a {
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     text-align: center;
+    font-size: 19px;
+    color:rgb(88, 88, 88);
+   
+}
+a:hover {
+    color: rgb(176, 176, 176);
 }
 
 h1 {
     font-size: 50px;
+    color:rgb(88, 88, 88);
+   font-family: 'Montserrat', sans-serif;
 }
 
-p {
-    font-size: 20px;
-    text-align: center;
+div .intro {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 20px;
+    font-size: 18px;
+    width: 40%;
+    align-self: flex-start;
+    margin-left: 30px;
+}
+.new-post {
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+.new-post a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
 }
 .img {
-    /* max-width: 100px; */
-   border: 10px solid saddlebrown;
    max-width: 600px;
    max-height: 800px;
    /* object-fit: contain; */
@@ -46,29 +88,53 @@ p {
    margin-left: auto;
    margin-right: auto;
    display: block;
+   box-shadow: 1px 3px 5px
 }
 h3 {
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
+    color:rgb(88, 88, 88);
 }
 
 .center {
+    padding: 0;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
     text-align: center;
+    font-size: 20px;
+}
+
+.date {
+    margin-top: 50px;
+}
+.title {
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+ 
+
+a span:hover {
+    color: rgb(176, 176, 176);
 }
 
 .post {
-    margin: 50px;
+    margin: 35px;
 }
 
 h3 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 35px;
+    color:rgb(88, 88, 88);
 }
 
-
-
-
-
-
+span {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(176, 176, 176);
+    font-size: 20px;
+    /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
 
 footer {
+    /* background-color: white; */
     text-align: center;
 }
