@@ -23,34 +23,34 @@
 
  <!-- =============== MAIN ================-->
     <div>
-        <h1> what's the word on <span><%= tag %></span> ?</h1>
+        <h4 id="wtw-tag-intro"> what's the word on <span><i><%= tag %></i></span> ?</h4>
     </div>
-    <div>
-        <a href="/blog/new">new</a>
+    <div class="center new-post">
+        <a href="/blog/new">New post</a>
     </div>
-    
         <% for (let i = 0; i < health.length; i++){ %>
-               <section>
-                    <div>
-                        <h4><%=health[i].title%></h4>
-                    </div>
-                    <div  data-aos="fade-left">
+               <div class="post">
+                    <div class="img" data-aos="fade-left">
                         <img src="<%=health[i].image%>" alt="N/A">
                     </div>
-                    <div  data-aos="fade-right">
+                    <div class="center title" id="tag-title">
+                        <h1><%=health[i].title%></h1>
+                    </div>
+                    <div  class="center show-excert tag-excert" data-aos="fade-right">
                         <p> <%=health[i].excert%></p>
                     </div>
-                    <div>
-                        <a href="/blog/<%=health[i].id%>"><span>read more</span></a>
+                    <div class="center">
+                        <a href="/blog/<%=health[i].id%>">read more</a>
                     </div>
-                <form action="/blog/<%=health[i].id%>?_method=DELETE" method="POST">
+                <form class="center" action="/blog/<%=health[i].id%>?_method=DELETE" method="POST">
                     <input type="submit" value="DELETE">
                     <a href="/blog/<%=health[i].id%>/edit">EDIT</a>
                 </form>
-                <a href="/tags/<%=health[i].tag%>"><%=health[i].tag%></a>
+                <div class="center"><ion-icon name="pricetag-sharp"></ion-icon>
+                    <a href="/tags/<%=health[i].tag%>"><%=health[i].tag%></a>
+                </div>
+            </div>
             
-               </section>
-        
         <%}%>
  
 <!-- =============== FOOTER ================-->

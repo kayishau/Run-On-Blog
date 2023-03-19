@@ -4,30 +4,32 @@
     <title>wtw.blog</title>
    <%- include('./partials/head.ejs') %>
 </head>
-    <body>
+    <body class="main">
  <!-- =============== HEADER ================-->
 
          <%- include('./partials/header.ejs') %>
 
  <!-- =============== MAIN ================-->
         <section>
-            <h1><%=health.title%></h1>
-            <div>
-                <div>
-                    <a href="/blog/new">new</a>
+            <div class="post">
+                <div class="center new-post new-post-show">
+                    <a href="/blog/new">New post</a>
                 </div>
-                <div  data-aos="fade-in">
+                <div class="center title" id="show-title">
+                    <h1><%=health.title%></h1>
+                </div>
+                <div class="img" data-aos="fade-in">
                     <img src="<%=health.image%>" alt="N/A">
                 </div>
-                <div>
+                <div  class="center show-excert">
                      <p><%=health.excert%></p>
                 </div>
-    
-               <form action="/blog/<%=health.id%>?_method=DELETE" method="POST">
+
+               <form  class="center" action="/blog/<%=health.id%>?_method=DELETE" method="POST">
                 <input type="submit" value="delete">
                 <a href="/blog/<%=health.id%>/edit">EDIT</a>
                </form>
-               <div>
+               <div  class="center"><ion-icon name="pricetag-sharp"></ion-icon>
                     <a href="/tags/<%=health.tag%>"><%=health.tag%></a>
                 </div>
             </div>

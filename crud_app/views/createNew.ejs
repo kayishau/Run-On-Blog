@@ -4,16 +4,16 @@
     <title>wtw.new</title>
    <%- include('./partials/head.ejs') %>
 </head>
-<body>
+<body class="main">
  <!-- =============== HEADER ================-->
 
         <%- include('./partials/header.ejs') %>
 
  <!-- =============== MAIN =================-->
-    <section>
+    
       <div>
-        <h1>so what's the word ?</h1>
-        <h5>Time to spill.</h5>
+        <h4>so what's the word ?</h4>
+        <h5 class="center">Time to spill.</h5>
       </div>
       <form action="/blog"  method="POST">
             <div>
@@ -43,7 +43,7 @@
           <input type="submit" value="Create Post">
       </form>
      
-    </section>
+   
    
  <!-- =============== FOOTER ================-->
  <%- include('./partials/footer.ejs') %>
