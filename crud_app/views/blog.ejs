@@ -5,12 +5,14 @@
    <%- include('./partials/head.ejs') %>
 </head>
 <body>
+    <div class="main">
  <!-- =============== HEADER ================-->
 
     <%- include('./partials/header.ejs') %>
 
  <!-- =============== MAIN ================-->
-    <div class="main">
+ 
+    <div>
         <h1><span>W</span>hats <span>T</span>he <span>W</span>ord ?</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias provident blanditiis ipsa perferendis molestiae soluta quae facere distinctio libero eos quo nobis dicta, officiis nihil iste voluptate natus ea eaque!</p> 
     </div>
@@ -19,21 +21,20 @@
     </div>
    
         <% for (let i = 0; i < health.length; i++){ %>
-            <div>
-                <div data-aos="fade-in">
+            <div class="post">
+                <div class="img" data-aos="fade-in">
                     <img src="<%=health[i].image%>" alt="N/A">
                 </div>
-                <div>
+                <div class="center">
                     <h3><%=health[i].title%></h3> 
                 </div>
-                <div>
+                <div class="center">
                     <span><%=health[i].date%></span>
                 </div>
-                <!-- everytime I click on the read more, in the action will work but it crashes my server right after it is performed -->
-                <div>
+                <div class="center">
                     <a href="/blog/<%=health[i].id%>"><span>read more</span></a>
                 </div>
-                <div>
+                <div class="center"><ion-icon name="pricetag-sharp"></ion-icon>
                     <a href="/tags/<%=health[i].tag%>"><%=health[i].tag%></a>
                 </div>
             </div> 
@@ -47,8 +48,9 @@
     <script>
       AOS.init({
         duration: 3000,
-        once: false
+        once: true
       });
     </script>
+    </div>
 </body>
 </html>

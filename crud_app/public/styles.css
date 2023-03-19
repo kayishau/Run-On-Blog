@@ -1,8 +1,74 @@
 /* =========== NAV ============ */
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    border: 10px solid rgb(143, 7, 111);
+}
+
+div {
+    align-self: center;
+    margin-bottom: 15px;
+}
+ul {
+    list-style: none;
+    align-self: flex-end
+    
+}
+
+ul li {
+    font-size: 20px;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+
+a {
+    text-decoration: none;
+    text-align: center;
+}
+
 h1 {
-    font-size: 200px;
+    font-size: 50px;
 }
 
 p {
-    font-size: 100px;
+    font-size: 20px;
+    text-align: center;
+}
+.img {
+    /* max-width: 100px; */
+   border: 10px solid saddlebrown;
+   max-width: 600px;
+   max-height: 800px;
+   /* object-fit: contain; */
+   overflow: hidden;
+   margin-left: auto;
+   margin-right: auto;
+   display: block;
+}
+h3 {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+}
+
+.post {
+    margin: 50px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+
+
+
+
+
+
+footer {
+    text-align: center;
 }
