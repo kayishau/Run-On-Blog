@@ -15,4 +15,5 @@ This CRUD app is a personal blog with the capabilities to create tags and file a
  3.Create weight tracking/measurement tracling ability for physical tag and then display the on a graph.
  4. For users with specific diseases such as Lupus, create logs of physical health and create the smae functionality and capabilities as the mental tag.
  5. Keeping it clean and simple but possibly revisiting the styling
+ 6. For lifestyle/Travel tag, create a map that pins locations youve been to onn the map
 
