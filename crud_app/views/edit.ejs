@@ -1,21 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>wtw.edit</title>
+    <%- include('./partials/head.ejs') %>
 </head>
-<body>
-    <h1>Edit Blog Post Page</h1>
-    <form action="/blog/<%=health.id%>?_method=PUT" method="POST">
-        Name: <input type="text" name="name" value="<%=health.name%>"/>
-        Date: <input type="text" name="date" value="<%=health.date%>"/>
-        Title: <input type="text" name="title" value="<%=health.title%>"/>
-        Excert: <input type="text" name="excert" value="<%=health.excert%>"/>
-        Tag: <input type="text" name="tag" value="<%=health.tag%>"/>
-        Image: <input type="text" name="image" value="<%=health.image%>"/>
-        <input type="submit" value="Edit">
+<body class="main">
+     <!-- =============== HEADER ================-->
+
+     <%- include('./partials/header.ejs') %>
+
+     <!-- =============== MAIN =================-->
+    <h3>Edit Post</h3>
+   
+        <form class="form" action="/blog/<%=health.id%>?_method=PUT" method="POST">
+            <div>
+                <label for="name">Name:</label>
+                 <input class="input-box" type="text" name="name" value="<%=health.name%>"/>
+            </div>
+            <div>
+                <label for="date">Date:</label>
+                 <input class="input-box" type="text" name="date" value="<%=health.date%>"/>
+            </div>
+            <div>
+                <label for="title">Title:</label>
+                 <input class="input-box" type="text" name="title" value="<%=health.title%>"/>
+            </div>
+            <div>
+                <label for="tag">Tag:</label>
+                <input class="input-box" type="text" name="tag" value="<%=health.tag%>"/>
+            </div>
+            <div>
+                <label for="excert">Excert:</label>
+                 <input class="excert" type="text" name="excert" value="<%=health.excert%>"/>
+            </div>
+            <div>
+                <label for="image">Image:</label>
+                 <input class="input-box" type="text" name="image" value="<%=health.image%>"/>
+            </div>
+            <div>
+                <input class="submit" type="submit" value="EDIT">
+            </div>
+    
+      
     </form>
 </body>
 </html>
